@@ -1,0 +1,108 @@
+/* Custom Styles for Location Page */
+
+/* Hero Section */
+.hero-banner {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Locations Section */
+.locations-section {
+  background-image: url('/productbg1image.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+}
+
+.locations-header {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #38b2ac, #319795);
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 2rem;
+}
+
+.locations-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.location {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.location-city {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.location-detail {
+  margin-bottom: 1rem;
+}
+
+.location-address {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.location-description {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.location-contact {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .locations-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .locations-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

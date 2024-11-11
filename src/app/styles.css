@@ -1,0 +1,197 @@
+/* styles.css */
+
+/* Overall container for the homepage */
+.homepage-container {
+  position: relative;
+}
+
+/* Carousel Section */
+.carousel-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay on top of the carousel for text visibility */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with opacity */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Heading styling */
+.heading {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #ec4899, #f59e0b); /* Pink to Yellow gradient */
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  animation: gradient-text 3s ease infinite;
+}
+
+/* Button styling */
+.order-btn {
+  background: linear-gradient(to right, #f472b6, #f1d0d6); /* Gradient Pink button */
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  animation: pulse 1s infinite;
+}
+
+.order-btn:hover {
+  transform: scale(1.05);
+}
+
+.order-btn .btn-text {
+  background: linear-gradient(to right, #3b82f6, #9333ea); /* Blue to Purple gradient */
+  background-clip: text;
+  color: transparent;
+}
+
+/* Button animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Gradient animation for text */
+@keyframes gradient-text {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* New Arrival Section */
+.new-arrival-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.new-arrival-left,
+.new-arrival-right {
+  width: 100%;
+}
+
+.new-arrival-left {
+  background: rgba(255, 255, 255, 0.7); /* Light background */
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-right: 2rem;
+}
+
+.new-arrival-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ec4899; /* Pink color */
+  margin-bottom: 1.5rem;
+}
+
+.new-arrival-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;  /* This makes the list display as a column */
+  gap: 1.5rem;  /* Adds spacing between the list items */
+}
+
+.new-arrival-item {
+  font-size: 1.125rem;
+  color: #374151; /* Dark gray text */
+}
+
+.new-arrival-right {
+  width: 50%;
+}
+
+.new-arrival-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 80vh;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .order-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .new-arrival-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .new-arrival-left {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .new-arrival-right {
+    width: 100%;
+  }
+
+  .new-arrival-heading {
+    font-size: 2rem;
+  }
+
+  .new-arrival-item {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-arrival-heading {
+    font-size: 1.75rem;
+  }
+
+  .new-arrival-item {
+    font-size: 0.9rem;
+  }
+}

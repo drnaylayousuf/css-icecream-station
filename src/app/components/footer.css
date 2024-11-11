@@ -1,0 +1,59 @@
+/* footer.css */
+
+footer {
+    background: linear-gradient(to right, #38b2ac, #ed64a6); /* Teal to Pink gradient */
+    padding: 2rem 1rem; /* Vertical and horizontal padding */
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Horizontal padding */
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* Responsive font size */
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    margin-bottom: 1rem;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  li {
+    display: inline-block;
+    margin: 0 0.5rem; /* Spacing between links */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #4a5568; /* Gray color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  a:hover {
+    color: #718096; /* Darker gray on hover */
+  }
+  
+  h3 {
+    font-size: 1.25rem; /* Responsive font size */
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 0.875rem; /* Smaller font size */
+  }
+  
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 1.25rem; /* Smaller font size on small screens */
+    }
+    
+    h3 {
+      font-size: 1rem; /* Smaller font size on small screens */
+    }
+  }

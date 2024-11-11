@@ -1,0 +1,118 @@
+/* navbar.css */
+
+/* Navbar Container */
+.navbar-container {
+    background: linear-gradient(to right, #f472b6, #3b82f6); /* Pink to Blue gradient */
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Flexbox Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Left side: Logo and Title */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar-logo {
+    border-radius: 8px;
+}
+
+.navbar-title {
+    color: white;
+    font-size: 1.25rem; /* 20px */
+    font-weight: bold;
+}
+
+/* Hamburger Button for Mobile */
+.hamburger-container {
+    display: none; /* Hide on desktop */
+}
+
+.hamburger-button {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.line-1-open {
+    transform: rotate(45deg) translateY(6px);
+}
+
+.line-2-open {
+    opacity: 0;
+}
+
+.line-3-open {
+    transform: rotate(-45deg) translateY(-6px);
+}
+
+/* Navbar Links (Desktop) */
+.navbar-links {
+    display: flex;
+    gap: 24px;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* Mobile Navbar Links (Hidden by default) */
+.navbar-links-open {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-left {
+        flex: 1 1 50%;
+    }
+
+    .navbar-links {
+        display: none; /* Hide on mobile */
+    }
+
+    .hamburger-container {
+        display: block; /* Show hamburger icon */
+    }
+
+    .navbar-links-open {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger-container {
+        display: none; /* Hide hamburger on desktop */
+    }
+}
